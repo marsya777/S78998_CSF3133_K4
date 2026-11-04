@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UMT CAMPUS BAKERY</title>
+</head>
+
+<!-- Header and navigation-->
+<header>
+
+    <div id="header">
+        <h1>UMT CAMPUS BAKERY&reg;</h1>
+        <span>Freshly Baked, Happiness Served!</span>
+    </div>
+
+</header>
+
+<nav>
+
+    <div id="nav">
+        <a href="#header">Home</a> |
+        <a href="#content">Order Now</a> |
+        <a href="#sidebar">Price List</a> |
+        <a href="#footer">Contact</a>
+    </div>
+
+</nav>
+    
+<!-- content -->
+<section>
+
+    <div id="content">
+
+        <h2>Welcome to UMT Campus Bakery!</h2>
+
+        <p>
+            Welcome to <strong>UMT Campus Bakery</strong>, where we serve
+            <em>delicious homemade cakes</em> made with
+            <mark>fresh ingredients</mark> every day!
+            Enjoy our tasty treats at affordable prices.
+        </p>
+
+    </div>
+
+    <div id="sidebar">
+
+        <h2>Price List</h2>
+
+        <ul>
+            <li>Chocolate Cake - RM 15.00</li>
+            <li>Vanilla Cake - RM 12.00</li>
+            <li>Strawberry Cake - RM 14.00</li>
+            <li>Red Velvet Cake - RM 18.00</li>
+            <li>Cupcakes - RM 3.00 each</li>
+            <li>Cake Slices - RM 5.00 each</li>
+        </ul>
+
+        <p>Orders &gt; 10 pieces get a free drink!</p>
+
+    </div>
+
+    <h2>Online Order Form</h2>
+
+        <!-- Order form and price calculator -->
+        <form action="#" method="post"
+              oninput="total.value = (cupcakes.value * 3) + (cakeSlices.value * 5)">
+
+            <!-- Customer Information -->
+            <h3>Customer Information</h3>
+
+            <label>Customer Name:</label>
+            <input type="text" name="customerName"
+                   placeholder="Enter your name"
+                   required autofocus>
+            <br><br>
+
+            <label>Phone Number:</label>
+            <input type="tel" name="phone"
+                   placeholder="Enter phone number"
+                   required>
+            <br><br>
+
+            <label>Email:</label>
+            <input type="email" name="email"
+                   placeholder="Enter your email"
+                   required>
+            <br><br>
+
+            <!-- Pick-up Details -->
+            <h3>Pick-up Details</h3>
+
+            <label>Pick-up Date:</label>
+            <input type="date" name="date">
+            <br><br>
+
+            <label>Pick-up Time:</label>
+            <input type="time" name="time">
+            <br><br>
+
+            <!-- Flavour Selection -->
+            <h3>Cake Preferences</h3>
+
+            <label>Flavour:</label>
+            <input type="text" name="flavour" list="flavours">
+
+            <datalist id="flavours">
+                <option value="Chocolate">
+                <option value="Vanilla">
+                <option value="Strawberry">
+                <option value="Red Velvet">
+            </datalist>
+            <br><br>
+
+            <label>Icing Colour:</label>
+            <input type="color" name="icingColour">
+            <br><br>
+
+            <label>Sweetness Level:</label>
+            <input type="range" name="sweetness"
+                   min="1" max="5" step="1">
+            <br><br>
+
+            <!-- Price Calculator -->
+            <h3>Price Calculator</h3>
+
+            <label>Cupcakes (RM 3.00 each):</label>
+            <input type="number" name="cupcakes"
+                   min="0" value="0">
+            <br><br>
+
+            <label>Cake Slices (RM 5.00 each):</label>
+            <input type="number" name="cakeSlices"
+                   min="0" value="0">
+            <br><br>
+
+            <label>Total Price:</label>
+            RM <output name="total" for="cupcakes cakeSlices">0</output>
+
+            <br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Order"><br><br>
+
+        </form>
+
+</section>
+
+<!--footer-->
+<footer>
+
+    <div id="footer">
+
+        <p>
+            Contact CampusBake&reg; |
+            Email: campusbake@example.com
+        </p>
+
+        <p>
+            &copy; 2026 CampusBake. All rights reserved.
+        </p>
+
+        <p>
+            Thank you for visiting CampusBake!&nbsp;Enjoy your treats!
+        </p>
+
+    </div>
+
+</footer>
+
+</html>
+
+<!--
+7. TESTING OBSERVATIONS:
+
+Test 1: Click Submit with all fields empty.
+Observation: The browser displays a validation message because
+the required fields are empty. The form cannot be submitted.
+
+Test 2: Enter "myemail" in the email field and submit again.
+Observation: Fill in the other required fields first (customer
+name and phone number). The browser displays a validation
+message because "myemail" is not a valid email address.
+The form cannot be submitted until a valid email is entered.
+-->

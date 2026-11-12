@@ -1,0 +1,67 @@
+/* ===== Page basics ===== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+header, section, footer { padding: 10px 5%; }
+
+/* ===== Navigation bar ===== */
+ul {
+  list-style-type: none;    /* remove bullets */
+  margin: 0;
+  padding: 0;
+  background-color: #1A5276;
+}
+nav li { display: inline-block; }
+nav a {
+  display: block;
+  padding: 14px 22px;
+  text-decoration: none;    /* remove underline */
+  text-transform: uppercase;
+  background-color: #1A5276;
+}
+/* Nav link colours, in the order link, visited, hover, active */
+nav a:link, nav a:visited { color: #ffffff; }
+nav a:hover  { color: #ffffff; background-color: #E67E22; }   /* different colour on hover */
+nav a:active { color: #ffffff; background-color: #C0392B; }
+
+/* ===== Menu promotions ===== */
+.item { padding: 4px 0; }
+.old-price { text-decoration: line-through; color: #7f8c8d; }   /* crossed-out old price */
+
+/* ===== Video (responsive) ===== */
+figure { margin: 0; }
+video { max-width: 100%; height: auto; }
+figcaption { font-style: italic; color: #555555; }
+
+/* ===== Feedback form ===== */
+.feedback-form {
+  width: 90%;
+  max-width: 460px;
+  padding: 18px;
+  background-color: #FDEBD0;
+  border: 2px solid #E67E22;
+}
+.feedback-form input[type="text"],
+.feedback-form input[type="email"] {
+  width: 100%;
+  padding: 6px;
+}
+.feedback-form button {
+  padding: 8px 20px;
+  color: #ffffff;
+  background-color: #1A5276;
+  border: 0;
+  cursor: pointer;
+}
+.feedback-form button:hover { background-color: #E67E22; }
+
+/* ===== Footer ===== */
+footer { background-color: #1A5276; color: #ffffff; }
+footer p { color: #ffffff; }
+footer a:link, footer a:visited { color: #AED6F1; }
+footer a:hover { color: #E67E22; }
+footer a:active { color: #C0392B; }
+address { font-style: normal; }

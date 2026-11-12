@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Viewport meta tag so the page fits small screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-Café Campus</title>
+  <!-- External style sheet: navigation bar, prices, video and feedback form -->
+  <link rel="stylesheet" href="cafe.css">
+  <style>
+    /* Link states, in the correct order: link, visited, hover, active */
+    a:link {color: #1A5276;}
+    a:visited {color: #7D3C98;}
+    a:hover {color: #E67E22;}
+    a:active {color: #C0392B;}
+    /* Line above the main heading */
+    h1 {text-decoration: overline;}
+    /* Paragraph colour and alignment */
+    p {color: #333333; text-align: justify;}
+    /* Intro paragraph */
+    #intro {
+      font-size: 18px;
+      background-color: #FDEBD0;
+    }
+    /* Highlighted prices */
+    .highlight {
+      font-weight: bold;
+      color: #C0392B;
+    }
+  </style>
+</head>
+<body>
+<!--
+  Error 1 (Line 7): HTML comment syntax used inside the style block. CSS comments must use slash-star. Fixed.
+  Error 2 (Line 9): list-style-type: no is invalid. Changed to none.
+  Error 3 (Lines 14-15): :hover was written before :visited, so hover did not work on visited links. Reordered to link, visited, hover, active.
+  Error 4 (Line 17): text-decoration: overlined is invalid. Changed to overline.
+  Error 5 (Line 18): Missing colon in p {color #333333}. Changed to color: #333333.
+  Error 6 (Line 21): The #intro rule was never closed. Added the closing brace.
+  Error 7 (Line 22): Selector highlight had no dot, so it did not match class highlight. Changed to .highlight.
+  Error 8 (Line 41): The paragraph used class intro but the CSS selector is #intro. Changed to id intro.
+  Error 9 (Line 34): href menu points to a file called menu. Changed to #menu so it jumps to the menu section.
+  Error 10 (Lines 42 and 46): id item was used twice, but ids must be unique. Changed to class item.
+  Error 11 (Line 54): type mp4 is not a valid MIME type. Changed to video/mp4.
+  Error 12 (Line 53): The video had no controls attribute, so it could not be played. Added controls.
+  Error 13 (Line 6): type text/css on the style element is not needed in HTML5. Removed.
+-->
+
+  <!-- Header -->
+  <header>
+    <h1>e-Café Campus</h1>
+  </header>
+
+  <!-- Navigation bar (styled in cafe.css) -->
+  <nav>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menu section with promotions: old price crossed out, then new price -->
+  <section id="menu">
+    <h2>Today's Menu</h2>
+    <p id="intro">Freshly brewed coffee and local delights every day.</p>
+    <article class="item">
+      <h3>Kopi Tarik</h3>
+      <p>Only <span class="old-price">RM 4.50</span> <span class="highlight">RM 3.50</span></p>
+    </article>
+    <article class="item">
+      <h3>Nasi Lemak</h3>
+      <p>Only <span class="old-price">RM 6.50</span> <span class="highlight">RM 5.00</span></p>
+    </article>
+  </section>
+
+  <!-- Video section with caption -->
+  <section id="video">
+    <h2>Watch Our Story</h2>
+    <figure>
+      <video width="400" height="300" controls>
+        <source src="cafe.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>A day at e-Café Campus, from the first brew to the last order.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Feedback section with form (styled with .feedback-form in cafe.css) -->
+  <section id="feedback">
+    <h2>Give Us Feedback</h2>
+    <form class="feedback-form" action="#" method="post">
+      <p>
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required>
+      </p>
+      <p>
+        <label for="email">E-mail</label><br>
+        <input type="email" id="email" name="email" required>
+      </p>
+
+      <!-- Visit type: radio buttons, one choice only -->
+      <p>Visit type:<br>
+        <input type="radio" id="dinein" name="visit" value="dine-in" checked>
+        <label for="dinein">Dine-in</label>
+        <input type="radio" id="takeaway" name="visit" value="take-away">
+        <label for="takeaway">Take-away</label>
+      </p>
+
+      <!-- Favourite items: checkboxes, several choices allowed -->
+      <p>Favourite items:<br>
+        <input type="checkbox" id="kopi" name="fav" value="kopi-tarik">
+        <label for="kopi">Kopi Tarik</label>
+        <input type="checkbox" id="nasi" name="fav" value="nasi-lemak">
+        <label for="nasi">Nasi Lemak</label>
+        <input type="checkbox" id="roti" name="fav" value="roti-canai">
+        <label for="roti">Roti Canai</label>
+      </p>
+
+      <p><button type="submit">Submit</button></p>
+    </form>
+  </section>
+
+  <!-- Footer with contact address -->
+  <footer id="contact">
+    <p>&copy; 2026 e-Café Campus</p>
+    <address>
+      Contact: <a href="mailto:hello@ecafecampus.example">hello@ecafecampus.example</a>
+    </address>
+  </footer>
+
+</body>
+</html>

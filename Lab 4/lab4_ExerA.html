@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Terengganu</title>
+  <!-- External CSS: most of the styling is in style.css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Internal CSS: rules that apply to this page only -->
+  <style>
+    #seats-info { font-weight: bold; color: #b3402a; }
+    .tagline { font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <!-- Header: page title and tagline -->
+  <header>
+    <h1>Visit Terengganu</h1>
+    <p class="tagline">Turquoise water, coral islands and a coast that still moves at its own pace.</p>
+  </header>
+
+  <!-- Navigation bar: unordered list of links to each section -->
+  <nav>
+    <ul>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#trip">Trip</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Section 1: Destinations, one article per place -->
+    <section id="destinations">
+      <h2>Destinations</h2>
+
+      <article class="card">
+        <h3>Pulau Perhentian</h3>
+        <p>Snorkel over coral gardens and spot turtles just off the beach.</p>
+        <p>Promotion: <span class="old-price">RM 299</span> <span class="price">RM 199</span></p>
+      </article>
+
+      <article class="card">
+        <h3>Pulau Redang</h3>
+        <p>Marine park islands with clear water and some of the best diving in Malaysia.</p>
+        <p>Promotion: <span class="old-price">RM 399</span> <span class="price">RM 299</span></p>
+      </article>
+
+      <article class="card">
+        <h3>Masjid Kristal, Kuala Terengganu</h3>
+        <p>A glittering mosque beside the river, best visited at sunset.</p>
+        <p>Promotion: <span class="old-price">RM 129</span> <span class="price">RM 89</span></p>
+      </article>
+    </section>
+
+    <!-- Section 2: Promotional video with caption -->
+    <section id="video">
+      <h2>Watch Terengganu</h2>
+      <figure class="center">
+        <video width="640" height="360" controls>
+          <source src="terengganu.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="caption">A short look at the beaches and islands of Terengganu.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Section 3: Trip interest form and seat meter -->
+    <section id="trip">
+      <h2>Join the Trip</h2>
+      <p>
+        <label for="seats">Seats filled:</label>
+        <meter id="seats" min="0" max="40" value="28">28 of 40</meter>
+        <span id="seats-info">28 / 40 seats taken</span>
+      </p>
+
+      <form class="trip-form" action="#" method="post">
+        <p>
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="name" required>
+        </p>
+        <p>
+          <label for="email">E-mail</label><br>
+          <input type="email" id="email" name="email" required>
+        </p>
+
+        <!-- Traveller type: radio buttons share one name so only one can be chosen -->
+        <p>Traveller type:<br>
+          <input type="radio" id="student" name="traveller" value="student" checked>
+          <label for="student">Student</label>
+          <input type="radio" id="staff" name="traveller" value="staff">
+          <label for="staff">Staff</label>
+          <input type="radio" id="public" name="traveller" value="public">
+          <label for="public">Public</label>
+        </p>
+
+        <!-- Interests: checkboxes allow several choices -->
+        <p>Interests:<br>
+          <input type="checkbox" id="islands" name="interest" value="islands">
+          <label for="islands">Islands</label>
+          <input type="checkbox" id="food" name="interest" value="food">
+          <label for="food">Food</label>
+          <input type="checkbox" id="culture" name="interest" value="culture">
+          <label for="culture">Culture</label>
+          <input type="checkbox" id="nature" name="interest" value="nature">
+          <label for="nature">Nature</label>
+        </p>
+
+        <p><button type="submit">Submit</button></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer: copyright and contact address -->
+  <footer>
+    <p>&copy; 2026 Terengganu Tourism Office</p>
+    <address>
+      Contact: <a href="mailto:info@visitterengganu.example">info@visitterengganu.example</a>
+    </address>
+  </footer>
+
+</body>
+</html>

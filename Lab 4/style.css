@@ -1,0 +1,122 @@
+/* ===== Base styles ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: #12303b;
+  background-color: #eef6f5;
+}
+
+/* ===== Text decoration on headings ===== */
+h1 { text-decoration: overline; }   /* line above the main title */
+h2 { text-decoration: underline; color: #0b3c49; }
+h3 { color: #137a85; margin-top: 0; }
+
+/* ===== Link states (order matters: link, visited, hover, active) ===== */
+a:link    { color: #137a85; }
+a:visited { color: #6a4c93; }
+a:hover   { color: #e0634a; }
+a:active  { color: #b3402a; }
+
+/* ===== Header ===== */
+header {
+  padding: 50px 20px;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(160deg, #0b3c49 0%, #137a85 60%, #3fb5b0 100%);
+}
+header h1 { margin: 0 0 8px; font-size: 3em; letter-spacing: 1px; }
+header p  { margin: 0; font-size: 1.15em; }
+
+/* ===== Navigation bar ===== */
+nav ul {
+  list-style-type: none;    /* remove bullets */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #0b3c49;
+}
+nav li { flex: 1; }
+nav a {
+  display: block;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;    /* remove underline */
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  background-color: #0b3c49;
+}
+/* Link states for menu items, same order as above */
+nav a:link, nav a:visited { color: #ffffff; }
+nav a:hover  { color: #ffffff; background-color: #e0634a; }   /* hover colour */
+nav a:active { color: #ffffff; background-color: #b3402a; }
+
+/* ===== Page layout (percentage width for small screens) ===== */
+main { width: 90%; max-width: 960px; margin: 0 auto; padding: 10px 0; }
+section { padding: 24px 0; }
+
+/* ===== Destinations section ===== */
+#destinations { display: flex; flex-wrap: wrap; gap: 20px; }
+#destinations h2 { flex-basis: 100%; margin-bottom: 0; }
+.card {
+  flex: 1 1 250px;
+  padding: 18px;
+  background-color: #ffffff;
+  border-left: 6px solid #e0634a;
+}
+
+/* ===== Prices ===== */
+.old-price { text-decoration: line-through; color: #7a8c92; }  /* crossed-out old price */
+.price { color: #b3402a; font-weight: bold; font-size: 1.2em; }
+
+/* ===== Video section ===== */
+#video { text-align: center; }
+.center { margin: 0; text-align: center; }
+video { max-width: 100%; height: auto; background-color: #000000; }   /* scales on small screens */
+.caption { margin-top: 8px; font-style: italic; color: #4a6a73; }
+
+/* ===== Trip form ===== */
+.trip-form {
+  width: 90%;
+  max-width: 480px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #3fb5b0;
+}
+label { font-family: Arial, Helvetica, sans-serif; }
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #9bbcc1;
+  font-size: 1em;
+}
+button {
+  padding: 10px 24px;
+  border: 0;
+  color: #ffffff;
+  background-color: #137a85;
+  font-size: 1em;
+  cursor: pointer;
+}
+button:hover { background-color: #e0634a; }
+
+/* ===== Footer ===== */
+footer {
+  padding: 24px 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #0b3c49;
+}
+footer a:link, footer a:visited { color: #8fe0da; }
+footer a:hover  { color: #ffffff; }
+footer a:active { color: #e0634a; }
+address { font-style: normal; }
+
+/* ===== Small screens ===== */
+@media (max-width: 600px) {
+  nav ul { flex-direction: column; }
+  header h1 { font-size: 2.2em; }
+}

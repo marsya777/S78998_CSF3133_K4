@@ -1,0 +1,137 @@
+/* shop.css - stylesheet for the Campus Bookstore page */
+
+/* Page: Roboto font and paper.gif shown once at the top right */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  background-image: url("books.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size:cover;
+}
+
+/* Headings use the second Google Font (Merriweather) */
+h1,
+h2 {
+  font-family: 'Merriweather', serif;
+}
+
+/* Paragraphs: comfortable line spacing */
+p {
+  line-height: 1.6;
+}
+
+/* Header: cover background image, white text.
+   paper.gif is layered on top so it stays visible at the top right. */
+header {
+  background-image: url("books.jpg");;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Title sits on a light panel so the blue title stays readable */
+header h1 {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 8px 24px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+}
+
+header p {
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Navigation bar: dark horizontal menu */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Menu items sit side by side */
+li {
+  float: left;
+}
+
+/* Links fill the whole item (block) with padding */
+li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Hover effect on menu links */
+li a:hover {
+  background-color: #111;
+}
+
+/* Current page link (green, like Figure 5.3) */
+li a.active {
+  background-color: #04AA6D;
+}
+
+/* Main content */
+main {
+  padding: 10px 20px 20px;
+  background-color: white;
+}
+
+/* Table: single borders, full width */
+#products {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Cell borders and padding */
+#products td,
+#products th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* White odd rows (so no background shows through the table) */
+#products tbody tr {
+  background-color: white;
+}
+
+/* Grey even rows */
+#products tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Row hover effect */
+#products tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Header row: green, uppercase, centred, 12px top and bottom padding */
+#products th {
+  background-color: #04AA6D;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* Price column aligned to the right */
+#products td.price {
+  text-align: right;
+}
+
+/* Footer: subtle background, centred text, padding */
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+}

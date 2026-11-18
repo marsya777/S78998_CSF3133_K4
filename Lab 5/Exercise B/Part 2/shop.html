@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Bookstore</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shop.css">
+<style>
+h1 { text-align: center; }
+</style>
+</head>
+<body>
+<!-- Error 1 (shop.html, Line 7): rel="stylesheets" is not a valid link type, so shop.css never loaded. Corrected to rel="stylesheet". -->
+<!-- Error 2 (shop.html, Lines 10-12): the style element was placed inside the body, which is invalid HTML. Moved it into the head. -->
+<!-- Error 3 (shop.html, Line 18): inline style used an equals sign (color=#1B4F72;) instead of a colon, so the title was not blue. Corrected to color: #1B4F72;. -->
+<!-- Error 4 (shop.html, Line 20): table id="product" did not match the #products selectors in shop.css (Lines 26, 30, 34, 37, 40), so no table style applied. Changed the id to "products". -->
+<!-- Error 5 (shop.css, Line 2): font name misspelled as 'Robotto'. Corrected to 'Roboto'. -->
+<!-- Error 6 (shop.css, Line 4): background-repeat value "no repeat" has a space. Corrected to no-repeat so the image shows once. -->
+<!-- Error 7 (shop.css, Line 5): property name misspelled as bacground-position. Corrected to background-position. -->
+<!-- Error 8 (shop.css, Line 18): li a used display: inline, so the padding did not make a block link. Corrected to display: block. -->
+<!-- Error 9 (shop.css, Line 23): invalid selector li:a:hover. Corrected to li a:hover. -->
+<!-- Error 10 (shop.css, Line 27): border-collapse value "collapsed" is invalid. Corrected to collapse, which gives single borders. -->
+<!-- Error 11 (shop.css, Line 34): tr:nth-child(2) colours only one row. Corrected to tr:nth-child(even) for alternating rows. -->
+<!-- Error 12 (shop.css, Line 37): pseudo-class tr:hovered does not exist. Corrected to tr:hover. -->
+<!-- Error 13 (shop.css, Line 45): missing semicolon after background-color: #f1f1f1 in the footer rule. Added the semicolon. -->
+
+<header id="home">
+  <h1 style="color: #1B4F72;">Campus Bookstore</h1>
+  <p>Textbooks, stationery and more for every student.</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#books">Books</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="books">
+    <h2>Our Products</h2>
+    <table id="products">
+      <thead>
+        <tr><th>Item</th><th>Category</th><th>Price (RM)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Web Design Basics</td><td>Textbook</td><td class="price">45.00</td></tr>
+        <tr><td>A4 Notebook</td><td>Stationery</td><td class="price">6.50</td></tr>
+        <tr><td>USB Drive 32GB</td><td>Gadget</td><td class="price">25.00</td></tr>
+        <tr><td>Highlighter Set</td><td>Stationery</td><td class="price">9.90</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer id="contact">&copy; 2026 Campus Bookstore</footer>
+</body>
+</html>

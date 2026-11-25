@@ -1,0 +1,86 @@
+/* ---------- Page ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f4f8;
+  color: #1f2d3d;
+  margin: 0;
+  padding: 0 0 20px;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: #1b4f72;
+  color: #fff;
+  padding: 18px 24px;
+}
+header h1 { margin: 0 0 4px; font-size: 1.6rem; }
+header p  { margin: 0; font-size: 0.9rem; }
+
+/* ---------- Sections ---------- */
+main { max-width: 760px; margin: 16px auto; padding: 0 12px; }
+section {
+  background: #fff;
+  border: 1px solid #d8dee6;
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+#playerSection input[type="text"] {
+  padding: 6px 8px;
+  border: 1px solid #aab4c0;
+  border-radius: 4px;
+}
+#welcome { margin: 8px 0 0; font-weight: bold; color: #1b4f72; }
+
+/* ---------- Buttons (padding, background colour, pointer, hover) ---------- */
+button {
+  padding: 8px 16px;
+  background: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+button:hover { background: #1b4f72; }
+
+/* ---------- Game arena and images (fixed size 120px) ---------- */
+.choices { margin-bottom: 12px; }
+.arena {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+figure { margin: 0; text-align: center; }
+figcaption { font-weight: bold; margin-bottom: 6px; }
+img {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  background: #cfd6de;
+  object-fit: contain;
+}
+.vs { font-weight: bold; font-size: 1.3rem; color: #5d6d7e; }
+
+/* ---------- Result and scoreboard ---------- */
+#result { font-size: 1.2rem; font-weight: bold; min-height: 1.5em; margin: 0 0 8px; }
+.score span { font-weight: bold; margin-right: 14px; }
+
+/* ---------- History table ---------- */
+#history {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+#history th, #history td {
+  border: 1px solid #b8c2cc;
+  padding: 6px 10px;
+  text-align: center;
+}
+#history th { background: #1b4f72; color: #fff; }
+#summary { font-weight: bold; min-height: 1.4em; }
+
+/* ---------- Footer ---------- */
+footer { text-align: center; color: #5d6d7e; font-size: 0.85rem; }
+footer p { margin: 4px 0; }

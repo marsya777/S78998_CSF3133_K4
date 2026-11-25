@@ -134,4 +134,10 @@ function resetGame() {
   let blank = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
   document.getElementById("playerImg").src = blank;
   document.getElementById("computerImg").src = blank;
+
+    // Reset the player's name and start state
+  document.getElementById("playerName").value = "";   // clear the name input box
+  document.getElementById("welcome").innerHTML = "";  // clear the "Welcome, <name>!" message
+  document.getElementById("startTime").innerHTML = ""; // clear the start date and time
+  gameStarted = false;                                 // player must click Start Game again
 }

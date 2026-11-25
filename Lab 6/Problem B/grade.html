@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+  Error 1 (grade.html, Line 9):  onsubmit="checkMark()" must be onsubmit="return checkMark()", otherwise
+                                 the false returned by validation is ignored and the form is still submitted.
+  Error 2 (grade.html, Line 17): onclick="showtable()" must be showTable() - JavaScript is case-sensitive,
+                                 so the button did nothing ("showtable is not defined").
+  Error 3 (grade.html, Line 19): <script src="grades.js"> must be "grade.js" - the file name was wrong,
+                                 so no JavaScript was loaded and nothing happened when the button was clicked.
+  -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Grade Calculator</title>
+ 
+  <!--Link to external style.css-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Student Grade Calculator</h2>
+  <!-- FIXED (Error 1): onsubmit now uses "return" so a false value stops the form from reloading the page -->
+  <form name="gradeForm" onsubmit="return checkMark()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br>
+    <label for="mark">Mark (0-100):</label>
+    <input type="text" id="mark" name="mark"><br>
+    <button type="submit">Check Grade</button>
+    <!-- Added random mark button so it does not submit the form) -->
+    <button type="button" onclick="randomMark()">Random Mark</button>
+  </form>
+  <p id="result"></p>
+  <!-- added date and time the grade was checked -->
+  <p id="checkedOn"></p>
+  <!-- FIXED (Error 2): function name is showTable (capital T) -->
+  <button onclick="showTable()">Show Grade Table</button>
+  <div id="tableContainer"></div>
+  <!-- FIXED (Error 3): file name is grade.js, not grades.js -->
+  <script src="grade.js"></script>
+</body>
+</html>
